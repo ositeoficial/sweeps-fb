@@ -107,7 +107,7 @@ body {
 	padding: 20px;
 	position: relative;
 	/* background: #000000; */
-	background: #c21217;
+	background: #135EC7;
 }
 
 .mainlogo {
@@ -228,7 +228,7 @@ h1 {
 
 .color {
 	font-weight: 500;
-	background-color: #c21217;
+	background-color: #135EC7;
 	color: white;
 	padding: 2px 7px;
 	border-radius: 5px;
@@ -316,7 +316,7 @@ h1 {
 
 .started button:hover, .question button:hover {
 	/* background: #000000; */
-	background-color: #c21217;
+	background-color: #135EC7;
 	color: #fff;
 	border: 3px solid #fff;
 }
