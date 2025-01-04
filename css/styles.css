@@ -787,7 +787,7 @@ h1 {
 
 .footer {
 	text-align: center;
-	padding: 20px;
+	padding: 10px;
 	border-top: 1px solid #e5e7eb;
 }
 
@@ -806,25 +806,7 @@ h1 {
 	vertical-align: middle;
 }
 
-.footer-links {
-	font-size: 0;
-	margin: 16px 0 24px;
-}
 
-.footer-links a {
-	text-decoration: none;
-	margin-left: 16px;
-	font-size: 1rem;
-	color: #000000;
-}
-
-.footer-links a:first-child {
-	margin: 0;
-}
-
-.footer-links a:hover, .disclaimer-box p a:hover {
-	color: #b91c1c;
-}
 
 .tradenm {
 	font-size: 0.75rem;
