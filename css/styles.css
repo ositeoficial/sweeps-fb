@@ -119,14 +119,13 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;	
 }
 
-.mainlogo p {	
+.mainlogo p {
+	display: inline-block;
+	vertical-align: middle;
 	position: relative;
-	width: 100px;
-	height: 100px;
+	width: 10px;
+	height: 10px;
 	margin-right: 11px;
-	display: flex; /* Flexbox para centralizar a imagem */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */ 
 }
 
 .mainlogo p svg {
