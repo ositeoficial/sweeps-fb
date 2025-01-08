@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html><html lang="en"><head>
 
 
@@ -45,151 +46,58 @@
     <img src="https://www.uplevelrewards.shop/images/walmart-fb750.png" style="max-width: 100%; max-height: 100%;" alt="Imagem Responsiva">
   </div>
 
-    <div id="site2">
-    <div class="progress-circles">
-        <div class="circle active" id="circle1">1</div>
-        <div class="progress-line"></div>
-        <div class="circle" id="circle2">2</div>
-        <div class="progress-line"></div>
-        <div class="circle" id="circle3">3</div>
-    </div>
-
-    <div class="quiz-wrapper">
-        <div class="question-container active" id="locationQuestion">
-            <h2>Have you shopped at Walmart in the past month?</h2>
-            <button class="button" onclick="handleLocationClick()">Yes</button>
-            <button class="button" onclick="handleLocationClick()">No</button>
-        </div>
-
-        <div class="question-container" id="question1">
-            <h2>Are you satisfied with the product variety at Walmart?</h2>
-            <button class="button" onclick="handleQuestion1('yes')">Yes</button>
-            <button class="button" onclick="handleQuestion1('no')">No</button>
-        </div>
-
-        <div class="question-container" id="question2">
-            <h2>Do you find the staff at Walmart helpful?</h2>
-            <button class="button" onclick="handleQuestion2('yes')">Yes</button>
-            <button class="button" onclick="handleQuestion2('no')">No</button>
-        </div>
-
-        <div class="question-container" id="claimContainer">
-            <h2>Thank you!</h2>
-            <div class="guide-container">
-                <ul class="checklist">
-                    <li class="checked">
-                        <span class="circle-check">1</span>
-                        Click below to continue
-                    </li>
-                    <li class="checked">
-                        <span class="circle-check">2</span>
-                        Provide a valid email address
-                    </li>
-                    <li class="checked">
-                        <span class="circle-check">3</span>
-                        Complete 2-3 required deals
-                    </li>
-                    <li class="checked">
-                        <span class="circle-check">4</span>
-                        Claim your Rewards
-                    </li>
-                </ul>
-            </div>
-            <button class="button" onclick="handleClick()">CONTINUE!</button>
-        </div>
-    </div>
+     <div class="progress-circles">
+    <div class="circle active" id="circle1">1</div>
+    <div class="progress-line"></div>
+    <div class="circle" id="circle2">2</div>
+    <div class="progress-line"></div>
+    <div class="circle" id="circle3">3</div>
 </div>
 
+<div class="quiz-wrapper">
+    <div class="question-container active" id="locationQuestion">
+        <h2>Have you shopped at Walmart in the past month?</h2>
+        <button class="button" onclick="handleLocationClick()">Yes</button>
+        <button class="button" onclick="handleLocationClick()">No</button>
+    </div>
+
+    <div class="question-container" id="question1">
+        <h2>Are you satisfied with the product variety at Walmart?</h2>
+        <button class="button" onclick="handleQuestion1('yes')">Yes</button>
+        <button class="button" onclick="handleQuestion1('no')">No</button>
+    </div>
+
+    <div class="question-container" id="question2">
+        <h2>Do you find the staff at Walmart helpful?</h2>
+        <button class="button" onclick="handleQuestion2('yes')">Yes</button>
+        <button class="button" onclick="handleQuestion2('no')">No</button>
+    </div>
+
+    <div class="question-container" id="claimContainer">
+        <h2>Thank you!</h2>
+       <div class="guide-container">
+    <ul class="checklist">
+        <li class="checked">
+            <span class="circle-check">1</span>
+            Click below to continue
+        </li>
+        <li class="checked">
+            <span class="circle-check">2</span>
+            Provide a valid email address
+        </li>
+        <li class="checked">
+            <span class="circle-check">3</span>
+            Complete 2-3 required deals
+        </li>
+        <li class="checked">
+            <span class="circle-check">4</span>
+            Claim your Rewards
+        </li>
+    </ul>
+</div>    
+
 <style>
-#site2 * {
-    font-family: system-ui, sans-serif;
-}
-
-#site2 .progress-circles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: 30px;
-}
-
-#site2 .progress-line {
-    height: 2px;
-    width: 50px;
-    background-color: #ccc;
-}
-
-#site2 .circle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border: 2px solid #ccc;
-    flex-shrink: 0;
-}
-
-#site2 .circle.active {
-    background-color: #0056b3;
-    color: white;
-    border-color: #0056b3;
-}
-
-#site2 .circle.completed::after {
-    content: "✓";
-    font-weight: bold;
-}
-
-#site2 .quiz-wrapper {
-    position: relative;
-    overflow: hidden;
-    max-width: 600px;
-    margin: 0 auto;
-    min-height: 300px;
-}
-
-#site2 .question-container {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-    opacity: 0;
-    pointer-events: none;
-}
-
-#site2 .question-container.active {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: all;
-}
-
-#site2 .question-container.left {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-
-#site2 .button {
-    background-color: #135EC7;
-    color: white;
-    padding: 15px 32px;
-    margin: 3px;
-    border: none;
-    cursor: pointer;
-    font-size: 21px;
-    font-weight: bold;
-    width: 300px;
-    border-radius: 35px;
-}
-
-#site2 .button:hover {
-    background-color: #0056b3;
-}
-
-#site2 .guide-container {
+.guide-container {
     padding: 20px;
     max-width: 600px;
     margin-top: -10px;
@@ -199,21 +107,21 @@
     margin-right: auto;
 }
 
-#site2 .checklist {
+.checklist {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: left;
 }
 
-#site2 .checklist li {
+.checklist li {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     font-size: 16px;
 }
 
-#site2 .circle-check {
+.circle-check {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -228,15 +136,127 @@
     color: white;
 }
 
-#site2 .checked .circle-check {
+.checked .circle-check {
     background-color: #135EC7;
     border-color: #135EC7;
 }
+</style>
+         
+           <button class="button" onclick="handleClick()">
+    CONTINUE!
+</button>
+
+<script>
+function handleClick() {
+    fbq('track', 'Lead');
+    const baseUrl = 'https://glstrck.com/aff_c?offer_id=1157&aff_id=1497';
+    const urlParams = new URLSearchParams(window.location.search);
+    let finalUrl = baseUrl;
+    urlParams.forEach((value, key) => {
+        finalUrl += `&${key}=${value}`;
+    });
+    window.location.href = finalUrl;
+}
+</script>
 	
+	   
+    </div>
+	
+</div>
+
+<style>
+/* Adicionando a fonte system-ui ao corpo */
+* {
+    font-family: system-ui, sans-serif;
+}
+
+.progress-circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 30px;
+}
+
+.progress-line {
+    height: 2px;
+    width: 50px;
+    background-color: #ccc;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    flex-shrink: 0;
+}
+
+.circle.active {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
+
+.circle.completed::after {
+    content: "✓";
+    font-weight: bold;
+}
+
+.quiz-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 300px;
+}
+
+.question-container {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.question-container.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.question-container.left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.button {
+    background-color: #135EC7;
+    color: white;
+    padding: 15px 32px;
+    margin: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: bold;
+    width: 300px;
+    border-radius: 35px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
 </style>
 
 <script>
-	function updateQuestion(currentId, nextId, circleNum) {
+function updateQuestion(currentId, nextId, circleNum) {
     const currentCircle = document.getElementById(`circle${circleNum}`);
     currentCircle.innerHTML = "";
     currentCircle.classList.add("completed");
@@ -267,8 +287,8 @@ function handleQuestion1(answer) {
 function handleQuestion2(answer) {
     updateQuestion("question2", "claimContainer", 3);
 }
-
-</script>
+</script>                   
+    
     
                             <div class="comments">
                     <p class="others-say">Read what others have to say about our program:</p>
