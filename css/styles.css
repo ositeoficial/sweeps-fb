@@ -117,6 +117,8 @@ body {
 	text-decoration: none;
 	font-weight: 700;
 	font-family: 'Roboto Condensed', sans-serif;
+	max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
 }
 
 .mainlogo p {
