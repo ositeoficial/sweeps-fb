@@ -116,18 +116,17 @@ body {
 	color: #fff;
 	text-decoration: none;
 	font-weight: 700;
-	font-family: 'Roboto Condensed', sans-serif;
-	max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
-        height: auto; /* Mantém a proporção da imagem */
+	font-family: 'Roboto Condensed', sans-serif;	
 }
 
-.mainlogo p {
-	display: inline-block;
-	vertical-align: middle;
+.mainlogo p {	
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 100px;
+	height: 100px;
 	margin-right: 11px;
+	display: flex; /* Flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */ 
 }
 
 .mainlogo p svg {
