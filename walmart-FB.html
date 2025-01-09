@@ -42,7 +42,7 @@
     <img src="https://www.uplevelrewards.shop/images/walmart-fb750.png" style="max-width: 100%; max-height: 100%;" alt="Imagem Responsiva">
   </div>
 
-     <div class="progress-circles">
+    <div class="progress-circles">
     <div class="circle active" id="circle1">1</div>
     <div class="progress-line"></div>
     <div class="circle" id="circle2">2</div>
@@ -69,101 +69,106 @@
         <button class="button" onclick="handleQuestion2('no')">No</button>
     </div>
 
+    <div class="question-container" id="loadingScreen">
+        <div class="loading-content">
+            <div class="pulse-ring"></div>
+            <h2>Analisando suas respostas<span class="dots"><span>.</span><span>.</span><span>.</span></span></h2>
+        </div>
+    </div>
+
     <div class="question-container" id="claimContainer">
         <h2>Thank you!</h2>
-       <div class="guide-container">
-    <ul class="checklist">
-        <li class="checked">
-            <span class="circle-check">1</span>
-            Click below to continue
-        </li>
-        <li class="checked">
-            <span class="circle-check">2</span>
-            Provide a valid email address
-        </li>
-        <li class="checked">
-            <span class="circle-check">3</span>
-            Complete 2-3 required deals
-        </li>
-        <li class="checked">
-            <span class="circle-check">4</span>
-            Claim your Rewards
-        </li>
-    </ul>
-</div>    
-
-<style>
-.guide-container {
-    padding: 20px;
-    max-width: 600px;
-    margin-top: -10px;
-    margin-bottom: -20px;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.checklist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.checklist li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-.circle-check {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    margin-right: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    font-weight: bold;
-    font-size: 16px;
-    color: white;
-}
-
-.checked .circle-check {
-    background-color: #135EC7;
-    border-color: #135EC7;
-}
-</style>
-         
-           <button class="button" onclick="handleClick()">
-    CONTINUE!
-</button>
-
-<script>
-function handleClick() {
-    fbq('track', 'Lead');
-    const baseUrl = 'https://glstrck.com/aff_c?offer_id=1157&aff_id=1497';
-    const urlParams = new URLSearchParams(window.location.search);
-    let finalUrl = baseUrl;
-    urlParams.forEach((value, key) => {
-        finalUrl += `&${key}=${value}`;
-    });
-    window.location.href = finalUrl;
-}
-</script>
-	
-	   
+        <div class="guide-container">
+            <ul class="checklist">
+                <li class="checked">
+                    <span class="circle-check">1</span>
+                    Click below to continue
+                </li>
+                <li class="checked">
+                    <span class="circle-check">2</span>
+                    Provide a valid email address
+                </li>
+                <li class="checked">
+                    <span class="circle-check">3</span>
+                    Complete 2-3 required deals
+                </li>
+                <li class="checked">
+                    <span class="circle-check">4</span>
+                    Claim your Rewards
+                </li>
+            </ul>
+        </div>    
+        <button class="button" onclick="handleClaim()">CONTINUE!</button>
     </div>
-	
 </div>
 
 <style>
-/* Adicionando a fonte system-ui ao corpo */
 * {
     font-family: system-ui, sans-serif;
+}
+
+/* Animação dos pontos */
+.dots span {
+    opacity: 0;
+    color: #135EC7;
+    font-size: 30px;
+    animation: loadingDots 1.5s infinite;
+    margin-left: 2px;
+}
+
+.dots span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.dots span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes loadingDots {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Animação do círculo pulsante */
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.pulse-ring {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.pulse-ring:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #135EC7;
+    animation: pulse 2s ease-out infinite;
+    opacity: 0.6;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.3);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
 .progress-circles {
@@ -249,6 +254,46 @@ function handleClick() {
 .button:hover {
     background-color: #0056b3;
 }
+
+.guide-container {
+    padding: 20px;
+    max-width: 300px;
+    margin: -10px auto -20px;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.circle-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.checked .circle-check {
+    background-color: #135EC7;
+    border-color: #135EC7;
+}
 </style>
 
 <script>
@@ -281,9 +326,41 @@ function handleQuestion1(answer) {
 }
 
 function handleQuestion2(answer) {
-    updateQuestion("question2", "claimContainer", 3);
+    updateQuestion("question2", "loadingScreen", 3);
+    
+    // Aguarda 3 segundos antes de mostrar a tela final
+    setTimeout(() => {
+        const loadingScreen = document.getElementById("loadingScreen");
+        loadingScreen.classList.remove("active");
+        loadingScreen.classList.add("left");
+        
+        setTimeout(() => {
+            const claimContainer = document.getElementById("claimContainer");
+            claimContainer.classList.add("active");
+        }, 50);
+    }, 3000);
 }
-</script>                   
+
+function handleClaim() {
+    // Tracking do Facebook
+    if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+    }
+    
+    // Construção da URL com parâmetros
+    const baseUrl = 'https://glstrck.com/aff_c?offer_id=1157&aff_id=1497';
+    const urlParams = new URLSearchParams(window.location.search);
+    let finalUrl = baseUrl;
+    
+    // Adiciona todos os parâmetros da URL atual
+    urlParams.forEach((value, key) => {
+        finalUrl += `&${key}=${encodeURIComponent(value)}`;
+    });
+    
+    // Redireciona para a URL final
+    window.location.href = finalUrl;
+}
+</script>
     
     
                             <div class="comments">
