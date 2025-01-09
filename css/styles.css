@@ -207,7 +207,7 @@ body {
 
 h1 {
 	font-weight: 700;
-	font-size: 2.25rem;
+	font-size: 2rem;
 	line-height: 40px;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin-bottom: 20px;
@@ -334,7 +334,7 @@ h2 {
 
 .comments {
 	font-family: Helvetica, sans-serif;
-	margin-top: 45px;
+	margin-top: 35px;
 }
 
 .others-say {
