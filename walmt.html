@@ -549,29 +549,7 @@ function handleClaim() {
 </div>
     
    
-   <div class="faq-screen">
-            <div class="faq-overlay"></div>
-            <div class="faq-box">
-                <div class="faq-close">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="#9ca3af" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path></svg>
-                </div>
-                <p class="faq-headline">Frequently Asked Questions</p>
-                <div class="cards">
-                    <div class="card">
-                        <button class="active">WHICH ARE THE PARTICIPATION REQUIREMENTS? <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#d1d5db" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" class=""></path></svg></button>
-                        <p>You need to be over 18 years old and live in United States.</p>
-                    </div>
-                    <div class="card">
-                        <button>WHAT CAN I GET FROM THIS PROGRAM? <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#d1d5db" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" class=""></path></svg></button>
-                        <p>You can receive a Fashion Gift Card worth $750.</p>
-                    </div>
-                    <div class="card">
-                        <button>WHAT IF I APPLY, WITHOUT MEETING THE REQUIREMENTS? <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#d1d5db" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" class=""></path></svg></button>
-                        <p>Our applications are getting reviewed by our team daily, and those who don't meet the requirements will not get accepted on our program, but we will contact them as soon as they can join.</p>
-                    </div>
-                </div>
-            </div>
-        </div>      
+ 
      
        
     
@@ -749,15 +727,15 @@ function handleClaim() {
             }
         });
     
-        $(".faq-overlay, .faq-close").on('click', function() {
-            $(".faq-screen").fadeOut(200, function() {
-                $(".faq-box").css({opacity: "0"});
+        $(".faq-overlay, .-close").on('click', function() {
+            $(".-screen").fadeOut(200, function() {
+                $(".-box").css({opacity: "0"});
             });
         });
     
         $(".tophead button").on('click', function() {
-            $(".faq-screen").fadeIn(200, function() {
-                $(".faq-box").css({opacity: "1"});
+            $(".-screen").fadeIn(200, function() {
+                $(".-box").css({opacity: "1"});
             });
         });
     
